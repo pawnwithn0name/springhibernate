@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- ### IOC ### -->
+    <!-- Define your beans here 
+     
+    <bean id = "myInstructor"
+    	class="com.spring.ioc.JavaInstructor">
+    </bean>
+   -->
+   
+    <!-- ### IOC ### -->
+    
+    <!--  ### DI ### -->
+    
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency-->
+    <!--  
+    <bean id="myFortune"
+    	class="com.spring.di.HappyFortuneService">
+    </bean>
+    
+    <bean id = "myInstructor"
+    	class="com.spring.di.PythonInstructor">
+    -->	
+    	<!-- Set the constructor injection -->
+    <!-- 	
+    	<constructor-arg ref="myFortune"/>
+    </bean>
+     -->
+    
+    <!-- ### DI ### -->
+    
+    
+    <bean id="myFortune"
+    	class="com.spring.di.HappyFortuneService">
+    </bean>
+    
+    <bean id = "myGoLangInstructor"
+    	class = "com.spring.di.GoLangInstructor">
+    	
+    	<!-- set up our setter injection -->
+    	<property name="fortuneService" ref = "myFortune"/>
+    </bean>
+
+</beans>
+
+
+
+
+

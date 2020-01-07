@@ -11,7 +11,13 @@ public class MainSpringClass {
 		
 		Instructor objInstructor = context.getBean("myInstructor", Instructor.class);
 		
+		/*
 		
+		Instructor objInstructor2 = context.getBean("myInstructor", Instructor.class);
+		
+		boolean checkSame = (objInstructor == objInstructor2);
+		
+		*/
 		
 	
 		
